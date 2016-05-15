@@ -16,13 +16,13 @@
 import collections
 
 from delimiter import exceptions
-
+from delimiter import processor
 
 BoundedResource = collections.namedtuple('BoundedResource',
                                          ['consumed', 'bound'])
 
 
-class UpperBoundProcessor(object):
+class UpperBoundProcessor(processor.Processor):
     """Processes a limit given some upper bound."""
 
     @staticmethod
